@@ -1,14 +1,27 @@
 package com.crowbellx.todo_list.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity(name = "todos")
 public class Todo {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank
     private String nome;
+    @NotBlank
     private String descricao;
     private boolean realizada;
+    @NotBlank
+    private int prioridade;
+
+    public Todo(String nome, String descricao, boolean realizada, int prioridade) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.realizada = realizada;
+        this.prioridade = prioridade;
+    }
 
     public Long getId() {
         return id;
@@ -50,5 +63,5 @@ public class Todo {
         this.prioridade = prioridade;
     }
 
-    private int prioridade;
+
 }
