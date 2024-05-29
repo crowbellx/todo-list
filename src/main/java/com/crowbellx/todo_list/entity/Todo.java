@@ -16,6 +16,8 @@ public class Todo {
     @Enumerated(EnumType.STRING)
     private Prioridade prioridade;
 
+    public Todo(){}
+
     public Todo(String nome, String descricao, boolean realizada, Prioridade prioridade) {
         this.nome = nome;
         this.descricao = descricao;
