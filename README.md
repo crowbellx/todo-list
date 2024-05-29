@@ -17,7 +17,7 @@ O projeto foi elaborado [nesse vídeo](https://youtu.be/IjProDV001o).
 
 ## Práticas adotadas
 
-- SOLID, DRY, YAGNI, KISS
+- SOLID
 - API REST
 - Consultas com Spring Data JPA
 - Injeção de Dependências
