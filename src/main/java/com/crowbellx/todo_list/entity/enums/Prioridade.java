@@ -4,7 +4,7 @@ public enum Prioridade {
     URGENTE(1),
     NORMAL(2);
 
-    public int descricao;
+    public final int descricao;
 
     Prioridade(int descricao){
         this.descricao = descricao;
