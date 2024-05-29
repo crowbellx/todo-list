@@ -13,7 +13,7 @@ public class Todo {
     @NotBlank
     private String descricao;
     private boolean realizada;
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     private Prioridade prioridade;
 
     public Todo(String nome, String descricao, boolean realizada, Prioridade prioridade) {
