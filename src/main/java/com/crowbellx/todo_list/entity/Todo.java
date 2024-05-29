@@ -1,8 +1,8 @@
 package com.crowbellx.todo_list.entity;
 
+import com.crowbellx.todo_list.entity.enums.Prioridade;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 
 @Entity(name = "todos")
 public class Todo {
@@ -13,10 +13,10 @@ public class Todo {
     @NotBlank
     private String descricao;
     private boolean realizada;
-    @NotBlank
-    private int prioridade;
+    @Enumerated(EnumType.ORDINAL)
+    private Prioridade prioridade;
 
-    public Todo(String nome, String descricao, boolean realizada, int prioridade) {
+    public Todo(String nome, String descricao, boolean realizada, Prioridade prioridade) {
         this.nome = nome;
         this.descricao = descricao;
         this.realizada = realizada;
@@ -55,11 +55,11 @@ public class Todo {
         this.realizada = realizada;
     }
 
-    public int getPrioridade() {
+    public Prioridade getPrioridade() {
         return prioridade;
     }
 
-    public void setPrioridade(int prioridade) {
+    public void setPrioridade(Prioridade prioridade) {
         this.prioridade = prioridade;
     }
 
