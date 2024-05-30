@@ -52,7 +52,7 @@ $ http POST :8080/todos nome="Todo 1" descricao="Desc Todo 1" prioridade=1
     "descricao": "Desc Todo 1",
     "id": 1,
     "nome": "Todo 1",
-    "prioridade": 1,
+    "prioridade": "URGENTE",
     "realizado": false
   }
 ]
@@ -67,7 +67,7 @@ $ http GET :8080/todos
     "descricao": "Desc Todo 1",
     "id": 1,
     "nome": "Todo 1",
-    "prioridade": 1,
+    "prioridade": "URGENTE",
     "realizado": false
   }
 ]
@@ -82,7 +82,7 @@ $ http PUT :8080/todos/1 nome="Todo 1 Up" descricao="Desc Todo 1 Up" prioridade=
     "descricao": "Desc Todo 1 Up",
     "id": 1,
     "nome": "Todo 1 Up",
-    "prioridade": 2,
+    "prioridade": "NORMAL",
     "realizado": false
   }
 ]
