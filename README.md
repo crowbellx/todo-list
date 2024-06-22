@@ -5,8 +5,6 @@
 
 API para gerenciar tarefas (CRUD) que faz parte [desse desafio](https://github.com/simplify-liferay/desafio-junior-backend-simplify) para pessoas desenvolvedoras backend júnior, que se candidatam para a Simplify.
 
-O projeto foi elaborado [nesse vídeo](https://youtu.be/IjProDV001o).
-
 ## Tecnologias
  
 - [Spring Boot](https://spring.io/projects/spring-boot)
@@ -45,14 +43,14 @@ Para fazer as requisições HTTP abaixo, foi utilizada a ferramenta [httpie](htt
 
 - Criar Tarefa 
 ```
-$ http POST :8080/todos nome="Todo 1" descricao="Desc Todo 1" prioridade=1
+$ http POST :8080/todos nome="Todo 1" descricao="Desc Todo 1" prioridade=URGENTE
 
 [
   {
     "descricao": "Desc Todo 1",
     "id": 1,
     "nome": "Todo 1",
-    "prioridade": 1,
+    "prioridade": "URGENTE",
     "realizado": false
   }
 ]
@@ -67,7 +65,7 @@ $ http GET :8080/todos
     "descricao": "Desc Todo 1",
     "id": 1,
     "nome": "Todo 1",
-    "prioridade": 1,
+    "prioridade": "URGENTE",
     "realizado": false
   }
 ]
@@ -75,14 +73,14 @@ $ http GET :8080/todos
 
 - Atualizar Tarefa
 ```
-$ http PUT :8080/todos/1 nome="Todo 1 Up" descricao="Desc Todo 1 Up" prioridade=2
+$ http PUT :8080/todos/1 nome="Todo 1 Up" descricao="Desc Todo 1 Up" prioridade=NORMAL
 
 [
   {
     "descricao": "Desc Todo 1 Up",
     "id": 1,
     "nome": "Todo 1 Up",
-    "prioridade": 2,
+    "prioridade": "NORMAL",
     "realizado": false
   }
 ]
