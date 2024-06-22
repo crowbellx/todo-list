@@ -21,7 +21,8 @@ public class TodoService {
     }
 
     public List<Todo> list(){
-       var sort = Sort.by("prioridade").descending()
+       var sort = Sort.by("realizada")
+               .and(Sort.by("prioridade").descending())
                .and(Sort.by("nome").ascending());
 
        return todoRepository.findAll(sort);
